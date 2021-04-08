@@ -8,6 +8,10 @@ with open('data.json') as f, open('commands.json') as f1, open('games.json') as 
     games          = json.load(f2)
     partidas       = json.load(f3)
 
+
+AMONGUS = games[0]
+GARTICPHONE = games[1]
+
 bot = commands.Bot(command_prefix=data['prefix'])
 
 """
@@ -49,6 +53,9 @@ async def partida(ctx, juego: str, *args):
         pass
 
     hora: datetime.datetime = datetime.datetime.strptime(args[0], '%H:%M')
-    impostors, error = checkNumber(args[1])
+
+    if juego == AMONGUS:
+        impostors, error = checkNumber(args[1])
+        if error != None
 
 
