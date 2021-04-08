@@ -56,6 +56,7 @@ async def partida(ctx, juego: str, *args):
 
     if juego == AMONGUS:
         impostors, error = checkNumber(args[1])
-        if error != None
+        if error != None:
+            pass
 
 
