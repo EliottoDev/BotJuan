@@ -56,7 +56,12 @@ async def partida(ctx, juego: str, *args):
 
     if juego == AMONGUS:
         impostors, error = checkNumber(args[1])
-        if error != None:
+        if error != None or not (1 <= impostors <= 3):
+            await ctx.send('Debes introducir un numero valido de impostores para among us: 1-3')
             pass
+
+
+
+
 
 
